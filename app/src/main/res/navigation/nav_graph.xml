@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/viewPagerFragment">
+
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="uz.boywonder.playstoredemo.ui.ViewPagerFragment"
+        android:label="@string/main_viewPagerFragment"
+        tools:layout="@layout/fragment_view_pager" />
+    <fragment
+        android:id="@+id/normalTabFragment"
+        android:name="uz.boywonder.playstoredemo.ui.tabs.NormalTabFragment"
+        android:label="fragment_normal_tab"
+        tools:layout="@layout/fragment_normal_tab" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="uz.boywonder.playstoredemo.ui.SettingsFragment"
+        android:label="@string/settings_fragment"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/listTabFragment"
+        android:name="uz.boywonder.playstoredemo.ui.tabs.ListTabFragment"
+        android:label="fragment_list_tab"
+        tools:layout="@layout/fragment_list_tab" />
+
+</navigation>

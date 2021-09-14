@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Boy/AndroidStudioProjects/PlayStoreDemo/app/src/main/res/layout/activity_main.xml" value="0.12817028985507245" />
+        <entry key="..\:/Users/Boy/AndroidStudioProjects/PlayStoreDemo/app/src/main/res/layout/child_recyclerview_items.xml" value="0.25" />
+        <entry key="..\:/Users/Boy/AndroidStudioProjects/PlayStoreDemo/app/src/main/res/layout/fragment_blur_tab.xml" value="0.1" />
+        <entry key="..\:/Users/Boy/AndroidStudioProjects/PlayStoreDemo/app/src/main/res/layout/fragment_list_tab.xml" value="0.1" />
+        <entry key="..\:/Users/Boy/AndroidStudioProjects/PlayStoreDemo/app/src/main/res/layout/fragment_normal_tab.xml" value="0.19927536231884058" />
+        <entry key="..\:/Users/Boy/AndroidStudioProjects/PlayStoreDemo/app/src/main/res/layout/fragment_settings.xml" value="0.19927536231884058" />
+        <entry key="..\:/Users/Boy/AndroidStudioProjects/PlayStoreDemo/app/src/main/res/layout/fragment_view_pager.xml" value="0.19927536231884058" />
+        <entry key="..\:/Users/Boy/AndroidStudioProjects/PlayStoreDemo/app/src/main/res/layout/parent_recyclerview_items.xml" value="0.19927536231884058" />
+        <entry key="..\:/Users/Boy/AndroidStudioProjects/PlayStoreDemo/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2015625" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

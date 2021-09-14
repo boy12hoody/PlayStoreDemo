@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">PlayStoreDemo</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="main_viewPagerFragment">Asosiy</string>
+    <string name="settings_fragment">Sozlamalar</string>
+
+    <string name="tab_normal">Normal</string>
+    <string name="tab_list">Listing</string>
+
+    <string name="category_blur">Blurred</string>
+    <string name="category_grayscale">Grayscale</string>
+    <string name="category_name">Category</string>
+
+    <string name="image_title">Image Title</string>
+    <string name="image_description">Image</string>
 </resources>

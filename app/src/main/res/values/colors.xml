@@ -7,4 +7,13 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="actionBarBackgroundColor">#FF018786</color>
+    <color name="bottomNavViewColor">#FF018786</color>
+
+    <!-- RecyclerView -->
+    <color name="pageBackground">#0F171E</color>
+    <color name="rvTextColor">#C4DFEF</color>
+    <color name="rvItemTitleColor">#C4DFEF</color>
+
 </resources>
