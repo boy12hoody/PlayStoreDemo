@@ -1,4 +1,4 @@
-package uz.boywonder.playstoredemo.ui
+package uz.boywonder.playstoredemo.ui.settings
 
 import android.os.Bundle
 import android.view.View
@@ -17,8 +17,8 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.apply {
-            themeChangeBtn.setOnClickListener {  }
-            langChangeBtn.setOnClickListener {  }
+            themeChangeBtn.setOnClickListener { }
+            langChangeBtn.setOnClickListener { }
         }
     }
 }

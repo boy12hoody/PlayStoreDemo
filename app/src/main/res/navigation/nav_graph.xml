@@ -17,7 +17,7 @@
         tools:layout="@layout/fragment_normal_tab" />
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="uz.boywonder.playstoredemo.ui.SettingsFragment"
+        android:name="uz.boywonder.playstoredemo.ui.settings.SettingsFragment"
         android:label="@string/settings_fragment"
         tools:layout="@layout/fragment_settings" />
     <fragment

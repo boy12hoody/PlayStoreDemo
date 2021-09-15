@@ -17,4 +17,6 @@
     <string name="image_description">Image</string>
     <string name="theme_selection">Tema Tanlash</string>
     <string name="lang_selection">Til Tanlash</string>
+    <string name="uzbek">O\'zbekcha</string>
+    <string name="english">Inglizcha</string>
 </resources>
