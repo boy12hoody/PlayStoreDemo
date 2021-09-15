@@ -19,11 +19,24 @@
         android:id="@+id/settingsFragment"
         android:name="uz.boywonder.playstoredemo.ui.settings.SettingsFragment"
         android:label="@string/settings_fragment"
-        tools:layout="@layout/fragment_settings" />
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_languageBottomSheet"
+            app:destination="@id/languageBottomSheet" />
+    </fragment>
     <fragment
         android:id="@+id/listTabFragment"
         android:name="uz.boywonder.playstoredemo.ui.tabs.ListTabFragment"
         android:label="fragment_list_tab"
         tools:layout="@layout/fragment_list_tab" />
+    <dialog
+        android:id="@+id/languageBottomSheet"
+        android:name="uz.boywonder.playstoredemo.ui.dialogs.LanguageBottomSheet"
+        android:label="fragment_bottom_sheet_language"
+        tools:layout="@layout/fragment_bottom_sheet_language" >
+        <action
+            android:id="@+id/action_languageBottomSheet_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </dialog>
 
 </navigation>

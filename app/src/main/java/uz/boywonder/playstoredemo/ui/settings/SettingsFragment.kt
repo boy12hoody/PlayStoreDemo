@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.viewbinding.library.fragment.viewBinding
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import uz.boywonder.playstoredemo.R
 import uz.boywonder.playstoredemo.databinding.FragmentSettingsBinding
@@ -17,8 +18,13 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.apply {
-            themeChangeBtn.setOnClickListener { }
-            langChangeBtn.setOnClickListener { }
+            themeChangeBtn.setOnClickListener {
+            }
+            langChangeBtn.setOnClickListener {
+                val action =
+                    SettingsFragmentDirections.actionSettingsFragmentToLanguageBottomSheet()
+                findNavController().navigate(action)
+            }
         }
     }
 }

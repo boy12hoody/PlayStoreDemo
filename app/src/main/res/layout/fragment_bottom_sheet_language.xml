@@ -2,25 +2,25 @@
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/bottomNavViewColor"
     android:orientation="vertical"
-    android:padding="16dp">
+    tools:context=".ui.dialogs.LanguageBottomSheet">
 
     <TextView
         android:id="@+id/uz_language_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:text="@string/uzbek"
+        android:gravity="center"
         android:textColor="@color/rvItemTitleColor"
         android:textSize="18sp" />
 
     <TextView
         android:id="@+id/eng_language_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
         android:text="@string/english"
         android:textColor="@color/rvItemTitleColor"
         android:textSize="18sp" />
