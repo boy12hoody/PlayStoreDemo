@@ -27,15 +27,17 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment_container) as NavHostFragment
         navController = navHostFragment.findNavController()
 
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.viewPagerFragment,
-                R.id.settingsFragment
-            )
-        )
+        setSupportActionBar(binding.toolbar)
+
+//        val appBarConfiguration = AppBarConfiguration(
+//            setOf(
+//                R.id.viewPagerFragment,
+//                R.id.settingsFragment
+//            )
+//        )
 
         binding.bottomNavigationView.setupWithNavController(navController)
-        setupActionBarWithNavController(navController, appBarConfiguration)
+        setupActionBarWithNavController(navController)
     }
 
     override fun onSupportNavigateUp(): Boolean {

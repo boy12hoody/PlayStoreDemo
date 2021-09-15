@@ -6,6 +6,7 @@ class Constants {
 
         const val BASE_URL = "https://picsum.photos/"
 
+        const val QUERY_PAGE_NUMBER = 1
         const val QUERY_PAGE_SIZE = 20
     }
 }

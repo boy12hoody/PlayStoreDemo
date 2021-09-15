@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="actionBarBackgroundColor">@color/secondaryColor</color>
+    <color name="bottomNavViewColor">@color/secondaryColor</color>
+    <color name="bottomNavViewTextColor">@color/secondaryTextColor</color>
+
+    <!-- RecyclerView -->
+    <color name="pageBackground">@color/black</color>
+    <color name="rvTextColor">@color/secondaryTextColor</color>
+    <color name="rvItemTitleColor">@color/secondaryTextColor</color>
+    <color name="placeholderColor">@color/secondaryLightColor</color>
+
+    <!-- Custom BottomNav Color -->
+    <color name="checked">@color/secondaryTextColor</color>
+    <color name="unchecked">@color/secondaryLightColor</color>
+</resources>

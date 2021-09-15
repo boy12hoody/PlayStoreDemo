@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/pageBackground"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.ViewPagerFragment">
 
@@ -13,10 +14,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_scrollFlags="scroll|enterAlways"
-        app:tabIndicatorColor="@color/white"
+        app:tabIndicatorColor="@color/rvTextColor"
         app:tabIndicatorHeight="2dp"
-        app:tabSelectedTextColor="@color/white"
-        app:tabTextAppearance="@style/CustomTabTextStyle"
+        app:tabSelectedTextColor="@color/rvTextColor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/actionBarBackgroundColor"/>

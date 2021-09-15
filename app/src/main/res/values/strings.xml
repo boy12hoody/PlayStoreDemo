@@ -15,4 +15,6 @@
 
     <string name="image_title">Image Title</string>
     <string name="image_description">Image</string>
+    <string name="theme_selection">Tema Tanlash</string>
+    <string name="lang_selection">Til Tanlash</string>
 </resources>

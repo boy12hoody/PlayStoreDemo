@@ -12,7 +12,7 @@ import uz.boywonder.playstoredemo.util.MyDiffUtil
 
 class ChildRecyclerViewAdapter : RecyclerView.Adapter<ChildRecyclerViewAdapter.ChildViewHolder>() {
 
-    private var imageList = emptyList<ImageItem>()
+    private var childImageList = emptyList<ImageItem>()
 
     inner class ChildViewHolder(private val binding: ChildRecyclerviewItemsBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -37,18 +37,18 @@ class ChildRecyclerViewAdapter : RecyclerView.Adapter<ChildRecyclerViewAdapter.C
     }
 
     override fun onBindViewHolder(holder: ChildViewHolder, position: Int) {
-        val currentItem = imageList[position]
+        val currentItem = childImageList[position]
         holder.bind(currentItem)
     }
 
     override fun getItemCount(): Int {
-        return imageList.size
+        return childImageList.size
     }
 
     fun setNewData(newData: List<ImageItem>) {
-        val diffUtil = MyDiffUtil(imageList, newData)
+        val diffUtil = MyDiffUtil(childImageList, newData)
         val diffUtilResult = DiffUtil.calculateDiff(diffUtil)
-        imageList = newData
+        childImageList = newData
         diffUtilResult.dispatchUpdatesTo(this)
     }
 }
