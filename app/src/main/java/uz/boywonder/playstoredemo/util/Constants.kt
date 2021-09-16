@@ -16,7 +16,7 @@ class Constants {
         const val LANG_TYPE_UZ = "uz"
         const val LANG_TYPE_EN = "en"
         const val THEME_TYPE_SYSTEM = "system"
-        const val THEME_TYPE_LIGHT = "system"
-        const val THEME_TYPE_DARK = "system"
+        const val THEME_TYPE_LIGHT = "day"
+        const val THEME_TYPE_DARK = "night"
     }
 }

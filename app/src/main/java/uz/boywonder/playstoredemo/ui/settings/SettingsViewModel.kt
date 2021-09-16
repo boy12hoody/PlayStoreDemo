@@ -1,9 +1,12 @@
 package uz.boywonder.playstoredemo.ui.settings
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import uz.boywonder.playstoredemo.data.DataStoreRepository
 import uz.boywonder.playstoredemo.util.Constants.Companion.LANG_TYPE_UZ
@@ -16,10 +19,27 @@ class SettingsViewModel @Inject constructor(
 ) : ViewModel() {
 
     private var langType = LANG_TYPE_UZ
-    private var themeType = THEME_TYPE_SYSTEM
+    private var _themeType: MutableLiveData<String> = MutableLiveData(THEME_TYPE_SYSTEM)
+    val themeType: LiveData<String> get() = _themeType
 
-    val readLangChoice = dataStoreRepository.readLangChoice
-    val readThemeChoice = dataStoreRepository.readThemeChoice
+    // Since manual language selection is not working for me, it's disabled temporarily.
+    private val readLangChoice = dataStoreRepository.readLangChoice
+    fun readLangChoice() {
+        viewModelScope.launch {
+            readLangChoice.collect { value ->
+                langType = value
+            }
+        }
+    }
+
+    private val readThemeChoice = dataStoreRepository.readThemeChoice
+    fun readThemeChoice() {
+        viewModelScope.launch {
+            readThemeChoice.collect { value ->
+                _themeType.value = value
+            }
+        }
+    }
 
     fun saveLangChoice(langType: String) =
         viewModelScope.launch(Dispatchers.IO) {

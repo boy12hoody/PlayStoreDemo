@@ -23,6 +23,9 @@
         <action
             android:id="@+id/action_settingsFragment_to_languageBottomSheet"
             app:destination="@id/languageBottomSheet" />
+        <action
+            android:id="@+id/action_settingsFragment_to_themeBottomSheet"
+            app:destination="@id/themeBottomSheet" />
     </fragment>
     <fragment
         android:id="@+id/listTabFragment"
@@ -36,7 +39,20 @@
         tools:layout="@layout/fragment_bottom_sheet_language" >
         <action
             android:id="@+id/action_languageBottomSheet_to_settingsFragment"
-            app:destination="@id/settingsFragment" />
+            app:destination="@id/settingsFragment"
+            app:popUpTo="@id/settingsFragment"
+            app:popUpToInclusive="true" />
+    </dialog>
+    <dialog
+        android:id="@+id/themeBottomSheet"
+        android:name="uz.boywonder.playstoredemo.ui.dialogs.ThemeBottomSheet"
+        android:label="fragment_bottom_sheet_theme"
+        tools:layout="@layout/fragment_bottom_sheet_theme" >
+        <action
+            android:id="@+id/action_themeBottomSheet_to_settingsFragment"
+            app:destination="@id/settingsFragment"
+            app:popUpTo="@id/settingsFragment"
+            app:popUpToInclusive="true" />
     </dialog>
 
 </navigation>

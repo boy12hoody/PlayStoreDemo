@@ -51,12 +51,12 @@ class NormalTabFragment : Fragment(R.layout.fragment_normal_tab) {
 
                     hideShimmerEffect()
 
-                    categories.add(CategoryItem("Tech", response.data!!))
-                    categories.add(CategoryItem("Nature", response.data))
-                    categories.add(CategoryItem("People", response.data))
-                    categories.add(CategoryItem("City", response.data))
-                    categories.add(CategoryItem("Trees", response.data))
-                    categories.add(CategoryItem("IDK", response.data))
+                    categories.add(CategoryItem(getString(R.string.cat_nature), response.data!!))
+                    categories.add(CategoryItem(getString(R.string.cat_city), response.data))
+                    categories.add(CategoryItem(getString(R.string.cat_people), response.data))
+                    categories.add(CategoryItem(getString(R.string.cat_animals), response.data))
+                    categories.add(CategoryItem(getString(R.string.cat_tech), response.data))
+                    categories.add(CategoryItem(getString(R.string.cat_cats), response.data))
 
                     parentRvAdapter.setNewData(categories)
                 }

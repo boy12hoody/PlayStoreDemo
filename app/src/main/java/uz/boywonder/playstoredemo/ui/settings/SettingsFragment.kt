@@ -19,6 +19,8 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
 
         binding.apply {
             themeChangeBtn.setOnClickListener {
+                val action = SettingsFragmentDirections.actionSettingsFragmentToThemeBottomSheet()
+                findNavController().navigate(action)
             }
             langChangeBtn.setOnClickListener {
                 val action =

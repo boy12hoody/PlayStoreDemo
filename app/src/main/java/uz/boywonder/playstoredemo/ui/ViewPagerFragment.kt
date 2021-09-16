@@ -71,7 +71,5 @@ class ViewPagerFragment : Fragment(R.layout.fragment_view_pager) {
                 }
             }
         }
-
-
     }
 }

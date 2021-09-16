@@ -1,14 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">Play Store Demo</string>
-
-    <string name="main_viewPagerFragment">Main</string>
-    <string name="settings_fragment">Settings</string>
-
     <string name="tab_normal">Normal</string>
     <string name="tab_list">Listing</string>
-
+    <string name="main_viewPagerFragment">Main</string>
+    <string name="settings_fragment">Settings</string>
     <string name="category_name">Category</string>
-
     <string name="image_title">Image Title</string>
     <string name="image_description">Image</string>
     <string name="theme_selection">Theme Selection</string>

@@ -20,8 +20,11 @@
         <entry key="..\:/Users/Boy/AndroidStudioProjects/PlayStoreDemo/app/src/main/res/layout/placeholder_normal_layout.xml" value="0.1956521739130435" />
         <entry key="..\:/Users/Boy/AndroidStudioProjects/PlayStoreDemo/app/src/main/res/layout/placeholder_row_layout.xml" value="0.1956521739130435" />
         <entry key="..\:/Users/Boy/AndroidStudioProjects/PlayStoreDemo/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2015625" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.18125" />
         <entry key="app/src/main/res/layout/fragment_bottom_sheet_language.xml" value="0.18125" />
+        <entry key="app/src/main/res/layout/fragment_bottom_sheet_theme.xml" value="0.1671875" />
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.18125" />
+        <entry key="app/src/main/res/layout/fragment_view_pager.xml" value="0.18125" />
       </map>
     </option>
   </component>

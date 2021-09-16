@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="actionBarBackgroundColor">@color/secondaryColor</color>
-    <color name="bottomNavViewColor">@color/secondaryColor</color>
-    <color name="bottomNavViewTextColor">@color/secondaryTextColor</color>
+    <color name="primaryColor">#3949ab</color>
+    <color name="primaryLightColor">#6f74dd</color>
+    <color name="primaryDarkColor">#00227b</color>
+    <color name="primaryTextColor">#ffffff</color>
+
+    <color name="actionBarBackgroundColor">@color/primaryColor</color>
+    <color name="bottomNavViewColor">@color/primaryColor</color>
+    <color name="bottomNavViewTextColor">@color/primaryTextColor</color>
 
     <!-- RecyclerView -->
     <color name="pageBackground">@color/black</color>
-    <color name="rvTextColor">@color/secondaryTextColor</color>
-    <color name="rvItemTitleColor">@color/secondaryTextColor</color>
-    <color name="placeholderColor">@color/secondaryLightColor</color>
+    <color name="rvTextColor">@color/primaryTextColor</color>
+    <color name="rvItemTitleColor">@color/primaryTextColor</color>
+    <color name="placeholderColor">@color/primaryLightColor</color>
 
     <!-- Custom BottomNav Color -->
-    <color name="checked">@color/secondaryTextColor</color>
-    <color name="unchecked">@color/secondaryLightColor</color>
+    <color name="checked">@color/primaryTextColor</color>
+    <color name="unchecked">@color/primaryLightColor</color>
 </resources>
