@@ -8,7 +8,6 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.google.android.material.snackbar.Snackbar
 import uz.boywonder.playstoredemo.R
 import uz.boywonder.playstoredemo.databinding.FragmentBottomSheetLanguageBinding
 import uz.boywonder.playstoredemo.ui.settings.SettingsViewModel

@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import uz.boywonder.playstoredemo.databinding.ParentRecyclerviewItemsBinding
 import uz.boywonder.playstoredemo.model.CategoryItem
-import uz.boywonder.playstoredemo.model.ImageItem
 import uz.boywonder.playstoredemo.util.MyDiffUtil
 
 class ParentRecyclerViewAdapter :

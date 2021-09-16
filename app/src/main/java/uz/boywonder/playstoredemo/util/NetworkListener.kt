@@ -10,10 +10,8 @@ import kotlinx.coroutines.flow.MutableStateFlow
 
 class NetworkListener : ConnectivityManager.NetworkCallback() {
 
-    // State of Network exposed to Recipes Fragment
     private val isNetworkAvailable = MutableStateFlow(false)
 
-    // Network Check Function
     @RequiresApi(Build.VERSION_CODES.N)
     fun checkNetworkAvailability(context: Context): MutableStateFlow<Boolean> {
 
