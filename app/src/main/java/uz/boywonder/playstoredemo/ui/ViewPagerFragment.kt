@@ -54,7 +54,7 @@ class ViewPagerFragment : Fragment(R.layout.fragment_view_pager) {
                     true -> {
                         if (mainViewModel.isOffline) {
                             Snackbar.make(
-                                requireView(), "Back Online.", Snackbar.LENGTH_SHORT
+                                requireView(), getString(R.string.back_online), Snackbar.LENGTH_SHORT
                             ).setAction("Okay") {}.show()
 
                             mainViewModel.isOffline = false
@@ -63,7 +63,7 @@ class ViewPagerFragment : Fragment(R.layout.fragment_view_pager) {
 
                     false -> {
                         Snackbar.make(
-                            requireView(), "No Internet Connection.", Snackbar.LENGTH_SHORT
+                            requireView(), getString(R.string.no_connection), Snackbar.LENGTH_SHORT
                         ).setAction("Okay") {}.show()
 
                         mainViewModel.isOffline = true

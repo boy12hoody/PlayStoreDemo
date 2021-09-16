@@ -4,9 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.google.android.material.snackbar.Snackbar
+import uz.boywonder.playstoredemo.R
 import uz.boywonder.playstoredemo.databinding.FragmentBottomSheetLanguageBinding
 import uz.boywonder.playstoredemo.ui.settings.SettingsViewModel
 import uz.boywonder.playstoredemo.util.Constants.Companion.LANG_TYPE_EN
@@ -40,10 +43,12 @@ class LanguageBottomSheet : BottomSheetDialogFragment() {
         binding.apply {
             uzLanguageTextView.setOnClickListener {
                 settingsViewModel.saveLangChoice(LANG_TYPE_UZ)
+                Toast.makeText(context, getString(R.string.lang_selection_error), Toast.LENGTH_SHORT).show()
                 findNavController().navigate(action)
             }
             engLanguageTextView.setOnClickListener {
                 settingsViewModel.saveLangChoice(LANG_TYPE_EN)
+                Toast.makeText(context, getString(R.string.lang_selection_error), Toast.LENGTH_SHORT).show()
                 findNavController().navigate(action)
             }
         }

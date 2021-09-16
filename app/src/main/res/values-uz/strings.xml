@@ -20,4 +20,7 @@
     <string name="cat_cats">Mushuklar</string>
     <string name="cat_animals">Hayvonlar</string>
     <string name="cat_tech">Texnologiya</string>
+    <string name="lang_selection_error">To\'girlanmagan hali, tizim tili uchun ishlaydi. ¯\\_(ツ)_/¯</string>
+    <string name="no_connection">Internetga ulanishda xatolik.</string>
+    <string name="back_online">Internet qaytdi!</string>
 </resources>
