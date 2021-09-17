@@ -1,20 +1,23 @@
 package uz.boywonder.playstoredemo.ui.main
 
-import android.content.Context
 import android.content.res.Configuration
-import android.content.res.Resources
+import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.akexorcist.localizationactivity.core.LocalizationActivityDelegate
-import com.akexorcist.localizationactivity.core.OnLocaleChangedListener
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
 import uz.boywonder.playstoredemo.R
 import uz.boywonder.playstoredemo.databinding.ActivityMainBinding
 import uz.boywonder.playstoredemo.ui.settings.SettingsViewModel
@@ -25,17 +28,13 @@ import java.util.*
 
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity(), OnLocaleChangedListener {
-
-    private val localizationDelegate = LocalizationActivityDelegate(this)
+class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
     private val settingsViewModel: SettingsViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        localizationDelegate.addOnLocaleChangedListener(this)
-        localizationDelegate.onCreate()
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -50,13 +49,22 @@ class MainActivity : AppCompatActivity(), OnLocaleChangedListener {
         setupActionBarWithNavController(navController)
 
         settingsViewModel.readLangChoice()
-        settingsViewModel.langType.observe(this) { lang ->
-            setLanguage(lang)
+        settingsViewModel.readThemeChoice()
+
+        lifecycleScope.launch {
+            lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                settingsViewModel.themeType.collect { event ->
+                    applyDayNight(event)
+                }
+            }
         }
 
-        settingsViewModel.readThemeChoice()
-        settingsViewModel.themeType.observe(this) { theme ->
-            applyDayNight(theme)
+        lifecycleScope.launch {
+            lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                settingsViewModel.langType.collect { event ->
+                    applyLocale(event)
+                }
+            }
         }
     }
 
@@ -76,6 +84,7 @@ class MainActivity : AppCompatActivity(), OnLocaleChangedListener {
     /* MANUAL THEME CHANGE */
 
     private fun applyDayNight(state: String) {
+        Log.d("applyDayNight: ", state)
         when (state) {
             THEME_TYPE_LIGHT -> {
                 AppCompatDelegate
@@ -94,32 +103,18 @@ class MainActivity : AppCompatActivity(), OnLocaleChangedListener {
 
     /* MANUAL LANGUAGE CHANGE */
 
-    public override fun onResume() {
-        super.onResume()
-        localizationDelegate.onResume(this)
+    private fun applyLocale(lang: String?) {
+        Log.d("applyLocale: ", lang.toString())
+        if (lang != null) {
+            val config = resources.configuration
+            val locale = Locale(lang)
+            Locale.setDefault(locale)
+            config.setLocale(locale)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                createConfigurationContext(config)
+            }
+            resources.updateConfiguration(config, resources.displayMetrics)
+        }
     }
 
-    override fun attachBaseContext(newBase: Context) {
-        applyOverrideConfiguration(localizationDelegate.updateConfigurationLocale(newBase))
-        super.attachBaseContext(newBase)
-    }
-
-    override fun getApplicationContext(): Context {
-        return localizationDelegate.getApplicationContext(super.getApplicationContext())
-    }
-
-    override fun getResources(): Resources {
-        return localizationDelegate.getResources(super.getResources())
-    }
-
-    private fun setLanguage(language: String?) {
-        localizationDelegate.setLanguage(this, language!!)
-    }
-
-    val currentLanguage: Locale
-        get() = localizationDelegate.getLanguage(this)
-
-    override fun onAfterLocaleChanged() {}
-
-    override fun onBeforeLocaleChanged() {}
 }
