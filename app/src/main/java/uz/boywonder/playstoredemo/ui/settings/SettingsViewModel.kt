@@ -18,7 +18,9 @@ class SettingsViewModel @Inject constructor(
     private val dataStoreRepository: DataStoreRepository
 ) : ViewModel() {
 
-    private var langType = LANG_TYPE_UZ
+    private var _langType: MutableLiveData<String> = MutableLiveData(LANG_TYPE_UZ)
+    val langType: LiveData<String> get() = _langType
+
     private var _themeType: MutableLiveData<String> = MutableLiveData(THEME_TYPE_SYSTEM)
     val themeType: LiveData<String> get() = _themeType
 
@@ -27,7 +29,7 @@ class SettingsViewModel @Inject constructor(
     fun readLangChoice() {
         viewModelScope.launch {
             readLangChoice.collect { value ->
-                langType = value
+                _langType.value = value
             }
         }
     }

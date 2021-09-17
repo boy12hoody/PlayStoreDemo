@@ -20,7 +20,6 @@
     <string name="cat_cats">Cats</string>
     <string name="cat_animals">Animals</string>
     <string name="cat_tech">Tech</string>
-    <string name="lang_selection_error">Not implemented yet, But works for system language.. ¯\\_(ツ)_/¯</string>
     <string name="no_connection">No Internet Connection.</string>
     <string name="back_online">Back Online!</string>
 </resources>
