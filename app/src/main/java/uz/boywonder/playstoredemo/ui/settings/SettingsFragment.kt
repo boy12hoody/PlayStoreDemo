@@ -8,6 +8,7 @@ import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import uz.boywonder.playstoredemo.R
 import uz.boywonder.playstoredemo.databinding.FragmentSettingsBinding
+import uz.boywonder.playstoredemo.util.navigateSafe
 
 @AndroidEntryPoint
 class SettingsFragment : Fragment(R.layout.fragment_settings) {
@@ -20,12 +21,14 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
         binding.apply {
             themeChangeBtn.setOnClickListener {
                 val action = SettingsFragmentDirections.actionSettingsFragmentToThemeBottomSheet()
-                findNavController().navigate(action)
+//                findNavController().navigate(action) crashes because Google
+                findNavController().navigateSafe(action)
             }
             langChangeBtn.setOnClickListener {
                 val action =
                     SettingsFragmentDirections.actionSettingsFragmentToLanguageBottomSheet()
-                findNavController().navigate(action)
+//                findNavController().navigate(action) crashes because Google
+                findNavController().navigateSafe(action)
             }
         }
     }

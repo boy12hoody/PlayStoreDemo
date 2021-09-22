@@ -25,6 +25,7 @@
         <entry key="app/src/main/res/layout/fragment_bottom_sheet_theme.xml" value="0.1671875" />
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.18125" />
         <entry key="app/src/main/res/layout/fragment_view_pager.xml" value="0.18125" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.18125" />
       </map>
     </option>
   </component>

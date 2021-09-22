@@ -48,9 +48,6 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigationView.setupWithNavController(navController)
         setupActionBarWithNavController(navController)
 
-        settingsViewModel.readLangChoice()
-        settingsViewModel.readThemeChoice()
-
         lifecycleScope.launch {
             lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 settingsViewModel.themeType.collect { event ->
